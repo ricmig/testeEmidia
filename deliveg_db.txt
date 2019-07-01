@@ -1,0 +1,33 @@
+CREATE DATABASE deliveg_db_v2;
+
+CREATE TABLE categoria(
+	id_categoria INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    nome VARCHAR(65) NOT NULL
+);
+
+CREATE TABLE produto(
+	id_produto INT NOT NULL PRIMARY KEY UNIQUE AUTO_INCREMENT,
+    id_categoria int,
+    nome VARCHAR(65) NOT NULL,
+    descricao TEXT NOT NULL,
+    foto VARCHAR(255) NOT NULL, 
+    preco FLOAT NOT NULL,
+    estoque INT NOT NULL
+);
+
+ALTER TABLE produto 
+ADD FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria);
+
+CREATE TABLE pedido_produto(
+    id_produto INT NOT NULL,
+    id_pedido INT NOT NULL
+);
+INSERT INTO categoria (nome) VALUES ('legume');
+INSERT INTO categoria (nome) VALUES ('verdura');
+INSERT INTO categoria (nome) VALUES ('fruta');
+
+
+
+INSERT into produto(id_categoria, nome, descricao, foto, preco, estoque) VALUES(3, 'maça', 'produto bacana e vermelho, mas pode ser verde tb', 'maça.png', 10, 400);
+INSERT into produto(id_categoria, nome, descricao, foto, preco, estoque) VALUES(3, 'morango',  'produto bacana e vermelho', 'morango.png', 15, 400);
+INSERT into produto(id_categoria, nome, descricao, foto, preco, estoque) VALUES(1, 'cebola', 'produto bacana', 'cebola.png', 4, 400);

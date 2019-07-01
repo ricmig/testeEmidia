@@ -1,0 +1,58 @@
+.container-perfil {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  
+  
+  .display {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    max-width: 900px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+   
+  }
+  
+  @media screen and (max-width:900px) {
+    .container-perfil {
+      flex-direction: column;
+      align-items: center;
+    }
+    .display{
+      align-items: center;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .display {
+      max-width: 500px;
+      margin: 15px;
+    }
+  }
+  .section__title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .section__title span {
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .section__title span:hover {
+    transform: scale(1.3);
+    transition: all .5s ease-in-out;
+  }
+  #pagamento, #historico, #pedidosEmAndamento, 
+  #pedidosRecorrentes {
+      margin: 50px;
+      width: 350px;
+  }
+  
