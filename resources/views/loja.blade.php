@@ -37,9 +37,11 @@
               @if(count($receita->ingredientes($receita->id_receita)) > 0)                             
               <strong>Ingredientes:</strong>
               @endif
+              <ul>
               @foreach ($receita->ingredientes($receita->id_receita) as $ingrediente)
-              <p> {{$ingrediente->nome_ingrediente}} - {{$ingrediente->quantidade}} </p>
+              <li> {{$ingrediente->nome_ingrediente}} - {{$ingrediente->quantidade}} </li>
               @endforeach
+              </ul>
             <strong>Modo de Preparo:</strong>
             <p class="preco-card" id="produto-preco">{{ $receita->modo_de_preparo }}</p>                        
             </div>

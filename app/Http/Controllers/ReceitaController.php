@@ -19,7 +19,7 @@ class ReceitaController extends Controller
     }
 
     public function mostrarReceitas () {      
-        $receitas = Receitas::simplePaginate(10);       
+        $receitas = Receitas::simplePaginate(4);       
         $ingredientes = Ingredientes::all();
 
         return view('loja')->with('ingredientes', $ingredientes)->with('receitas', $receitas);
