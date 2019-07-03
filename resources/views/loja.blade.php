@@ -37,7 +37,7 @@
               @if(count($receita->ingredientes($receita->id_receita)) > 0)                             
               <strong>Ingredientes:</strong>
               @endif
-              <ul>
+              <ul id="listaIngredientes">
               @foreach ($receita->ingredientes($receita->id_receita) as $ingrediente)
               <li> {{$ingrediente->nome_ingrediente}} - {{$ingrediente->quantidade}} </li>
               @endforeach
