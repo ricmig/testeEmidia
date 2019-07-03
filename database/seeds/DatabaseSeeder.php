@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'id_receita' => 2,
             'nome_ingrediente' => 'Peito de frango',
             'quantidade' => '1/2 kg',
-        ]);
+        ]);        
         DB::table('ingredientes')->insert([
             'id_receita' => 2,
             'nome_ingrediente' => 'Açafrão',
